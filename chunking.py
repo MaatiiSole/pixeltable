@@ -1,6 +1,8 @@
 import pixeltable as pxt
 from pixeltable.iterators import DocumentSplitter
 
+print("Creando vista de chunks...")
+
 docs = pxt.get_table('pixeltable_db.docs')
 
 chunks_v = pxt.create_view(
@@ -13,3 +15,5 @@ chunks_v = pxt.create_view(
         metadata='page,title, heading,sourceline,bounding_box'
     )
 )
+
+print("Vista de chunks creada.")
